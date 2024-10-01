@@ -30,7 +30,7 @@ headers = construct_tmdb_auth_headers()
 requests_wrapper = RequestsWrapper(headers=headers)
 
 # Load the TMDB OpenAPI spec
-with open("tmdb_openapi.yaml") as f:
+with open("api_spec/tmdb_openapi.yaml") as f:
     raw_tmdb_api_spec = yaml.load(f, Loader=yaml.Loader)
 tmdb_api_spec = reduce_openapi_spec(raw_tmdb_api_spec)
 
